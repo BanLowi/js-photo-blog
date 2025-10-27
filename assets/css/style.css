@@ -1,7 +1,7 @@
 /* Background */
 header {
     background-image: url(../img/wall.png);
-    height: 10vh;
+    min-height: 10vh;
 }
 
 main {
