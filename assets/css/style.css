@@ -6,7 +6,7 @@ header {
 
 main {
     background-image: url(../img/cork.png);
-    height: 90vh;
+    min-height: 90vh;
 }
 
 /* Pin control */
