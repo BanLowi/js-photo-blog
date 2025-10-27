@@ -1,0 +1,17 @@
+* {
+    font-family: "Edu TAS Beginner";
+}
+
+header h1 {
+    font-weight: bold;
+    font-size: 5rem;
+}
+
+#date {
+    font-family: "Sometype Mono";
+    color: grey;
+}
+
+#photo-name {
+    font-weight: bold;
+}
