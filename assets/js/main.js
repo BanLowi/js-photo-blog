@@ -33,7 +33,7 @@ fetch(apiURL)
                         </div>
                         <div class="card-body">
                             <p id="date" class="mb-0 lh-1">${date}</p>
-                            <p id="photo-name" class="fs-3 lh-1">${title}</p>
+                            <p id="photo-name" class="fs-4 lh-1">${title.toUpperCase()}</p>
                         </div>
                     </div>
         `
