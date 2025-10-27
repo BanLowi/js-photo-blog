@@ -1,3 +1,6 @@
+const rowEl = document.querySelector(".row");
+
+// Chiamata AJAX
 const apiURL = "https://lanciweb.github.io/demo/api/pictures/";
 fetch(apiURL)
 .then(response => response.json())
@@ -10,5 +13,31 @@ fetch(apiURL)
         console.log(obj);
         photos.push(obj)
     }
-    
+
+    // Per ogni oggetto card
+    photos.forEach((photo) => {
+        // Oggetto destrutturato
+        const {id, title, date, url} = photo;
+        console.log(id);
+        
+        // Genero le card con i contenuti degli oggetti
+        const divEl = document.createElement("div");
+        divEl.classList.add("col-4", "mb-3");
+        divEl.innerHTML = `
+                    <div class="card relative border-0 rounded-0 shadow">
+                        <img src="./assets/img/pin.svg" alt="photo pin" class="absolute pin-center">
+
+                        <div class="card-header mt-3 bg-transparent border-0">
+                            <img src="${url}" alt="skate-park photo"
+                                class="img-fluid mt-photo">
+                        </div>
+                        <div class="card-body">
+                            <p id="date" class="mb-0 lh-1">${date}</p>
+                            <p id="photo-name" class="fs-3 lh-1">${title}</p>
+                        </div>
+                    </div>
+        `
+
+        rowEl.append(divEl)
+    })
 })
