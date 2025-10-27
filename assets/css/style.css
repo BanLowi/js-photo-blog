@@ -23,3 +23,8 @@ main {
   left: 50%;
   transform: translateX(-50%);
 }
+
+/* Utilities */
+.mt-photo {
+    margin-top: -4px;
+}
