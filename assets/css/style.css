@@ -1,19 +1,13 @@
 /* Background */
 header {
     background-image: url(../img/wall.png);
-    height: 10vh
+    height: 10vh;
 }
 
 main {
     background-image: url(../img/cork.png);
     height: 90vh;
 }
-
-.img-size {
-    width: 600px;
-    height: 600px;
-}
-
 
 /* Pin control */
 .relative {
@@ -27,6 +21,5 @@ main {
 .pin-center {
   top: -10px;
   left: 50%;
-  /* Origine immagine nella sua metà */
   transform: translateX(-50%);
 }
