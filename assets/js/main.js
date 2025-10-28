@@ -26,7 +26,7 @@ fetch(apiURL)
         
         // Genero le card con i contenuti degli oggetti
         const divEl = document.createElement("div");
-        divEl.classList.add("col-4", "mb-3");
+        divEl.classList.add("col-3", "mb-3", "hover_effect", "mx-auto");
         divEl.innerHTML = `
                     <div class="card relative border-0 rounded-0 shadow">
                         <p class="d-none">${id}<p>
