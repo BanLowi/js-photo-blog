@@ -18,3 +18,6 @@ Rendi la pagina responsive, in modo che su mobile e tablet le foto si dispongano
 - Ciclo l'array dell'API
     - Destrutturo i singoli oggetti
     - Riempo le card con le chiavi-valore degli oggetti
+
+- SE click su immagine
+    -overlay img src = immagine cliccata

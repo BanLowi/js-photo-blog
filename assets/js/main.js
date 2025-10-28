@@ -1,4 +1,8 @@
+// Elementi DOM
 const rowEl = document.querySelector(".row");
+const overlayEl = document.getElementById("overlay");
+const closeBtnEl = document.getElementById("closeBtn");
+const overlayImgEl = document.getElementById("overlayImg");
 
 // Chiamata AJAX
 const apiURL = "https://lanciweb.github.io/demo/api/pictures/";
@@ -14,7 +18,7 @@ fetch(apiURL)
         photos.push(obj)
     }
 
-    // Per ogni oggetto card
+    // Per ogni oggetto genero una card
     photos.forEach((photo) => {
         // Oggetto destrutturato
         const {id, title, date, url} = photo;
@@ -25,6 +29,7 @@ fetch(apiURL)
         divEl.classList.add("col-4", "mb-3");
         divEl.innerHTML = `
                     <div class="card relative border-0 rounded-0 shadow">
+                        <p class="d-none">${id}<p>
                         <img src="./assets/img/pin.svg" alt="photo pin" class="absolute pin-center">
 
                         <div class="card-header mt-3 bg-transparent border-0">
@@ -38,6 +43,31 @@ fetch(apiURL)
                     </div>
         `
 
-        rowEl.append(divEl)
+        rowEl.append(divEl)        
+        
+        // Al click compare l'overlay
+        divEl.addEventListener("click", () => {
+            overlayEl.classList.remove("d-none");
+
+            if (id === 1) {
+                overlayImgEl.src = url
+            } else if (id === 2) {
+                overlayImgEl.src = url
+            } else if (id === 3) {
+                overlayImgEl.src = url
+            } else if (id === 4) {
+                overlayImgEl.src = url
+            } else if (id === 5) {
+                overlayImgEl.src = url
+            } else if (id === 6) {
+                overlayImgEl.src = url
+            }
+            
+            // Al click scomapre l'overlay
+            closeBtnEl.addEventListener("click", () => {
+                overlayEl.classList.add("d-none")
+            })
+        })
     })
+
 })
