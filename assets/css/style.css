@@ -36,11 +36,22 @@ main {
 }
 
 /* Hover effect */
-div.col-3 {
+div.col-lg-3 {
     transition: ease-out 0.5s;
 }
 
-div.col-3:hover {
+div.col-md-4 {
+    transition: ease-in-out 0.5s;
+}
+
+div.col-lg-3:hover {
+    transform: scale(1.1);
+    transform: rotate(10deg);
+    z-index: 1;
+    box-shadow: 10px 20px 20px;
+}
+
+div.col-md-4:hover {
     transform: scale(1.1);
     transform: rotate(10deg);
     z-index: 1;
