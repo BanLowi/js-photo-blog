@@ -1,3 +1,8 @@
+/* Utilities */
+.mt-photo {
+    margin-top: -4px;
+}
+
 /* Background */
 header {
     background-image: url(../img/wall.png);
@@ -24,7 +29,8 @@ main {
   transform: translateX(-50%);
 }
 
-/* Utilities */
-.mt-photo {
-    margin-top: -4px;
+/* Overlay Image Control */
+#overlayImg {
+    width: 600px;
+    height: 600px;
 }
